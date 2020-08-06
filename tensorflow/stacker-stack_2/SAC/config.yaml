@@ -1,0 +1,8 @@
+agent: tonic.tensorflow.agents.SAC()
+environment: tonic.environments.ControlSuite('stacker-stack_2')
+experiment_name: null
+header: import tonic.tensorflow
+parallel: 1
+seed: 1
+sequential: 1
+trainer: tonic.Trainer()
