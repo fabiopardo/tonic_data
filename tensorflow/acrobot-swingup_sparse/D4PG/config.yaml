@@ -1,0 +1,11 @@
+after_training: null
+agent: tonic.tensorflow.agents.D4PG()
+before_training: null
+environment: tonic.environments.ControlSuite('acrobot-swingup_sparse')
+header: import tonic.tensorflow
+name: null
+parallel: 1
+seed: 4
+sequential: 1
+trainer: tonic.Trainer(steps=5000000, epoch_steps=50000, save_steps=5000000, test_episodes=5,
+  show_progress=False)

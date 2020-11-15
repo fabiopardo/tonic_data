@@ -1,8 +1,9 @@
 agent: tonic.tensorflow.agents.SAC()
 environment: tonic.environments.Bullet('HalfCheetahBulletEnv-v0')
-experiment_name: null
 header: import tonic.tensorflow
+name: null
 parallel: 1
 seed: 4
 sequential: 1
-trainer: tonic.Trainer()
+trainer: tonic.Trainer(steps=5000000, epoch_steps=50000, save_steps=500000, test_episodes=5,
+  show_progress=False)

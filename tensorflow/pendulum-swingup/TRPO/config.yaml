@@ -1,8 +1,9 @@
 agent: tonic.tensorflow.agents.TRPO()
 environment: tonic.environments.ControlSuite('pendulum-swingup')
-experiment_name: null
 header: import tonic.tensorflow
+name: null
 parallel: 1
-seed: 8
+seed: 9
 sequential: 1
-trainer: tonic.Trainer()
+trainer: tonic.Trainer(steps=5000000, epoch_steps=50000, save_steps=500000, test_episodes=5,
+  show_progress=False)
